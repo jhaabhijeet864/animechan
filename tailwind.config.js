@@ -1,3 +1,5 @@
+const { createPreset } = require('fumadocs-ui/tailwind-plugin');
+
 module.exports = {
   content: [
     './app/**/*.{js,ts,jsx,tsx,mdx}',
@@ -6,6 +8,7 @@ module.exports = {
     './content/**/*.{js,ts,jsx,tsx,mdx}',
     './node_modules/fumadocs-ui/dist/**/*.js',
   ],
+  presets: [createPreset()],
   theme: {
     fontFamily: {
       display: ['Inter'],
@@ -23,3 +26,4 @@ module.exports = {
     },
   },
 };
+
