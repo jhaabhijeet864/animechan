@@ -1,6 +1,6 @@
 import { RootProvider } from 'fumadocs-ui/provider';
-import '~/styles/globals.css';
 import 'fumadocs-ui/style.css';
+import '~/styles/globals.css';
 import type { ReactNode } from 'react';
 
 export default function Layout({ children }: { children: ReactNode }) {

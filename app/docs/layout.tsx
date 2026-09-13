@@ -98,19 +98,11 @@ export default function Layout({ children }: { children: ReactNode }) {
       {...baseOptions}
       sidebar={{
         defaultOpenLevel: 1,
-        banner: (
-          <div className="flex items-center justify-between px-3 py-2 text-xs rounded-lg border border-fd-border bg-fd-card text-fd-muted-foreground my-2">
-            <div className="flex items-center gap-2">
-              <span className="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span className="font-semibold text-fd-foreground">v1.0 REST API</span>
-            </div>
-            <span className="text-[11px] font-mono text-emerald-500 font-medium">Operational</span>
-          </div>
-        ),
       }}
     >
       {children}
     </DocsLayout>
   );
 }
+
 
