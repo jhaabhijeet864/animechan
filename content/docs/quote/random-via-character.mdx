@@ -1,22 +1,26 @@
+---
+title: "Get a random quote via Character"
+---
 import { LockClosedIcon } from "@radix-ui/react-icons";
 import { Callout, Text } from "@radix-ui/themes";
 
-# Get quotes from an Character
+# Get a random quote via Character
 
-This endpoint returns 5 ordered quotes from a given Character name.
+This endpoint a random quote from a given character name.
 
 ### The endpoint:
 ```sh
-/quotes/?character=<character>
+/quotes/random?character=<character>
 ```
 
 ### Return
-It will return an `array` of [`Quote`](/quote) object
+It will return a [`Quote`](/quote) object
+
 
 ### Example:
 > We are using the built-in global `fetch` API here, which is both available in browser and NodeJS as of now. But you can use any other programming language or request lib.
 
 ```js
-const response = await fetch(`${BASE_URL}/quotes?character=Saitama`)
+const response = await fetch(`${BASE_URL}/quotes/random?character=Saitama`)
 const quote = await response.json()
 ```
