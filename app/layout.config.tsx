@@ -1,18 +1,20 @@
 import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
-import Image from 'next/image';
 
 export const baseOptions: BaseLayoutProps = {
   nav: {
     title: (
-      <>
+      <span style={{ fontWeight: 700, fontSize: '1rem', letterSpacing: '-0.02em' }}>
         Animechan
-      </>
+      </span>
     ),
   },
   links: [
     { text: 'Home', url: '/' },
-    { text: 'Documentation', url: '/docs' },
-    { text: 'Pricing', url: '/pricing' }
+    { text: 'Pricing', url: '/pricing' },
+    {
+      text: 'GitHub',
+      url: 'https://github.com/AnimechanOrg/animechan',
+      external: true,
+    },
   ],
-  githubUrl: 'https://github.com/Animechan-API/animechan',
 };
