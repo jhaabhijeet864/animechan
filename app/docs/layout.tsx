@@ -81,6 +81,7 @@ const docsTree: PageTree.Root = {
       type: 'page',
       name: 'Pricing & Pro Plan',
       url: '/pricing',
+      external: true,
     },
     {
       type: 'page',
