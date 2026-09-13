@@ -22,7 +22,7 @@ main {
 }
 
 /* ─── Fumadocs Dark Theme (Claude Code-inspired) ─── */
-:root {
+.dark {
   --color-fd-background: #0d1117;
   --color-fd-foreground: #e6edf3;
   --color-fd-muted: #161b22;
@@ -42,27 +42,43 @@ main {
   --color-fd-sidebar: #0d1117;
 }
 
-html {
-  scroll-behavior: smooth;
+html.dark {
   background-color: #0d1117;
   color-scheme: dark;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Sidebar dark background */
-[data-fd-sidebar], aside[aria-label] {
+.dark [data-fd-sidebar], .dark aside[aria-label] {
   background-color: #0d1117 !important;
   border-right-color: #30363d !important;
 }
 
+/* Theme Toggle as a single icon */
+button[data-theme-toggle] {
+  padding: 0 !important;
+  border: none !important;
+  background: transparent !important;
+}
+button[data-theme-toggle] svg:not(.bg-fd-accent) {
+  display: none !important;
+}
+button[data-theme-toggle] svg.bg-fd-accent {
+  background-color: transparent !important;
+}
+
 /* Code blocks */
-pre {
+.dark pre {
   background-color: #161b22 !important;
   border: 1px solid #30363d;
   border-radius: 8px;
 }
 
 /* Inline code */
-:not(pre) > code {
+.dark :not(pre) > code {
   background-color: rgba(240, 136, 62, 0.12) !important;
   color: #f0883e !important;
   padding: 0.15em 0.4em;
@@ -71,9 +87,9 @@ pre {
 }
 
 /* Tables */
-table { border-color: #30363d; }
-th { background-color: #161b22; color: #8b949e; }
-td { border-color: #30363d; }
+.dark table { border-color: #30363d; }
+.dark th { background-color: #161b22; color: #8b949e; }
+.dark td { border-color: #30363d; }
 
 
 
