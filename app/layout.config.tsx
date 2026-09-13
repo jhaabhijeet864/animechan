@@ -9,8 +9,8 @@ export const baseOptions: BaseLayoutProps = {
     ),
   },
   links: [
-    { text: 'Home', url: '/', external: true },
-    { text: 'Pricing', url: '/pricing', external: true },
+    { text: 'Home', url: '/' },
+    { text: 'Pricing', url: '/pricing' },
     {
       text: 'GitHub',
       url: 'https://github.com/AnimechanOrg/animechan',

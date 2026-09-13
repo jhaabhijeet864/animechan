@@ -21,7 +21,27 @@ main {
 	flex: 1;
 }
 
-/* ─── Fumadocs Dark Theme (Claude Code-inspired) ─── */
+/* ─── Fumadocs Theme Tokens ─── */
+:root {
+  --color-fd-background: #ffffff;
+  --color-fd-foreground: #1f2328;
+  --color-fd-muted: #f6f8fa;
+  --color-fd-muted-foreground: #656d76;
+  --color-fd-popover: #ffffff;
+  --color-fd-popover-foreground: #1f2328;
+  --color-fd-card: #f6f8fa;
+  --color-fd-card-foreground: #1f2328;
+  --color-fd-border: #d0d7de;
+  --color-fd-primary: #d96d27;
+  --color-fd-primary-foreground: #ffffff;
+  --color-fd-secondary: #eaeef2;
+  --color-fd-secondary-foreground: #1f2328;
+  --color-fd-accent: #eaeef2;
+  --color-fd-accent-foreground: #1f2328;
+  --color-fd-ring: #d96d27;
+  --color-fd-sidebar: #f6f8fa;
+}
+
 .dark {
   --color-fd-background: #0d1117;
   --color-fd-foreground: #e6edf3;
@@ -47,33 +67,32 @@ html.dark {
   color-scheme: dark;
 }
 
-html {
-  scroll-behavior: smooth;
+html:not(.dark) {
+  background-color: #ffffff;
+  color-scheme: light;
 }
 
-/* Sidebar dark background */
+/* Sidebar styling */
 .dark [data-fd-sidebar], .dark aside[aria-label] {
   background-color: #0d1117 !important;
   border-right-color: #30363d !important;
 }
 
-/* Theme Toggle as a single icon */
-button[data-theme-toggle] {
-  padding: 0 !important;
-  border: none !important;
-  background: transparent !important;
-}
-button[data-theme-toggle] svg:not(.bg-fd-accent) {
-  display: none !important;
-}
-button[data-theme-toggle] svg.bg-fd-accent {
-  background-color: transparent !important;
+:not(.dark) [data-fd-sidebar], :not(.dark) aside[aria-label] {
+  background-color: #f6f8fa !important;
+  border-right-color: #d0d7de !important;
 }
 
 /* Code blocks */
 .dark pre {
   background-color: #161b22 !important;
   border: 1px solid #30363d;
+  border-radius: 8px;
+}
+
+:not(.dark) pre {
+  background-color: #f6f8fa !important;
+  border: 1px solid #d0d7de;
   border-radius: 8px;
 }
 
@@ -86,10 +105,23 @@ button[data-theme-toggle] svg.bg-fd-accent {
   font-size: 0.875em;
 }
 
+:not(.dark) :not(pre) > code {
+  background-color: rgba(217, 109, 39, 0.1) !important;
+  color: #c9510c !important;
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-size: 0.875em;
+}
+
 /* Tables */
 .dark table { border-color: #30363d; }
 .dark th { background-color: #161b22; color: #8b949e; }
 .dark td { border-color: #30363d; }
+
+:not(.dark) table { border-color: #d0d7de; }
+:not(.dark) th { background-color: #f6f8fa; color: #57606a; }
+:not(.dark) td { border-color: #d0d7de; }
+
 
 
 
